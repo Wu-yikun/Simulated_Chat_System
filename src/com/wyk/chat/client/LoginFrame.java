@@ -94,7 +94,7 @@ public class LoginFrame extends JFrame {
         enter.addActionListener(new ActionListener() {
 
             /**
-             * LoginFrame---ClientHandler
+             * LoginFrame---ClientHandler 
              */
             // 登录按钮触发事件
             @Override
