@@ -1,14 +1,5 @@
-<<<<<<< HEAD
-wyk|123
-pxj|123
-wcy|123
-lpg|123
-=======
-wuyikun|123456
-pengxinjie|123456
-wangcanyang|123456
-lipinggeng|123456
->>>>>>> 5d7aa28 (Expand Register Function)
-
-miaoxin|123456
-miaoxin|123456
+Wu-Yikun|123456
+Peng-Xinjie|123456
+Wang-Canyang|123456
+Li-Pinggeng|123456
+Miao-Xin|123456
