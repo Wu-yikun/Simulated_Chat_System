@@ -16,7 +16,7 @@ public class FaceFrame extends JFrame {
     public FaceFrame(JTextPane textPane) {
 
         // 放置图片的容器
-        JPanel panel = (JPanel)getContentPane();
+        JPanel panel = (JPanel) getContentPane();
         panel.setLayout(null);
         // 用双重循环来摆放图片
         for (int row = 0; row < 10; row++) {
@@ -33,7 +33,7 @@ public class FaceFrame extends JFrame {
 
                     @Override
                     public void mouseClicked(MouseEvent e) {
-                        JLabel jLabel = (JLabel)e.getSource();
+                        JLabel jLabel = (JLabel) e.getSource();
                         Icon icon2 = jLabel.getIcon();
                         // 在输入框中插入选中图片
                         textPane.insertIcon(icon2);
@@ -47,7 +47,7 @@ public class FaceFrame extends JFrame {
         }
         setSize(320, 300);
         // 设置弹出表情框的位置
-        setLocation(800, 400);
+        setLocation(textPane.getX() + 406, 220);
         setTitle("嘻哈猴");
         setVisible(true);
     }
