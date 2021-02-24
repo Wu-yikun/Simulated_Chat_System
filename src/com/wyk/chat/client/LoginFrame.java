@@ -14,7 +14,7 @@ import java.net.Socket;
 /**
  * 基于 Java 实现的聊天窗口
  * Group: 彭鑫杰、吴仪坤、王灿阳、李品庚
- *
+ * <p>
  * 登陆界面
  */
 
@@ -27,7 +27,7 @@ public class LoginFrame extends JFrame {
         this.setTitle("登录窗口");                 // 窗口名
         setSize(FRAME_WIDTH, FRAME_HEIGHT);      // 设置窗体大小
         setDefaultCloseOperation(EXIT_ON_CLOSE); // 窗口退出即程序运行结束
-        setResizable(false);                     // 禁用窗口最大最小化
+        setResizable(false);                      // 禁用窗口最大最小化
 
         /* 获取屏幕对象的高度和宽度 */
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
@@ -102,10 +102,10 @@ public class LoginFrame extends JFrame {
                 // 获取输入文本框中的用户信息---并将其传给客户端进行验证(ConnectionServer方法中实现)
                 String userName = textUid.getText();
                 String password = textPsw.getText();
-                if("".equals(userName)||"".equals(password)){
+                if ("".equals(userName) || "".equals(password)) {
                     JOptionPane.showMessageDialog(null, "请输入账号和密码~");
-                }else{
-                TransferInfo tfi = new TransferInfo();
+                } else {
+                    TransferInfo tfi = new TransferInfo();
                     tfi.setUserName(userName);
                     tfi.setPassword(password);
 
@@ -137,7 +137,7 @@ public class LoginFrame extends JFrame {
 
     /**
      * 连接服务器的入口---传入TransferInfo对象===用户的登录账号和密码
-     * 
+     *
      * @param tfi
      */
     public void connectionServer(TransferInfo tfi) {
@@ -147,7 +147,7 @@ public class LoginFrame extends JFrame {
             IOStream.writerMessage(socket, tfi);    // 将用户的基本登录信息发送给客户端进行验证
 
             // 开启客户端线程---并且传入LoginFrame窗口对象
-            ClientHandler clientHandler = new ClientHandler(socket,this);
+            ClientHandler clientHandler = new ClientHandler(socket, this);
             clientHandler.start();
         } catch (Exception exception) {
             exception.printStackTrace();
